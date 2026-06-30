@@ -320,19 +320,30 @@
   .about {
     padding: clamp(4rem, 10vw, 9rem) var(--pad);
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: clamp(1.5rem, 4vw, 4rem);
     align-items: start;
   }
   .about__label { position: sticky; top: 6rem; }
+  .about__photo {
+    position: relative;
+  }
+  .about__photo img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(100%);
+  }
+  .about__content { grid-column: span 1; }
   .about__statement {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: clamp(1.6rem, 3.4vw, 3rem);
+    font-size: clamp(1.6rem, 2.4vw, 2.4rem);
     line-height: 1.18;
     letter-spacing: -.01em;
     margin: 0;
-    max-width: 22ch;
   }
   .about__statement em { color: var(--cobalt); font-style: italic; }
   .about__sub {
@@ -340,12 +351,16 @@
     font-family: var(--sans);
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 46ch;
     opacity: .8;
   }
-  @media (max-width: 760px) {
+  @media (max-width: 860px) {
+    .about { grid-template-columns: 1fr 1fr; }
+    .about__label { display: none; }
+    .about__content { grid-column: span 1; }
+  }
+  @media (max-width: 600px) {
     .about { grid-template-columns: 1fr; }
-    .about__label { position: static; }
+    .about__photo img { aspect-ratio: 4 / 3; }
   }
 
   /* =========================================================
@@ -565,7 +580,10 @@
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="about__label"><span class="eyebrow">About</span></div>
-    <div>
+    <div class="about__photo">
+      <img src="images/web/headshot.jpg" alt="Dani Parker, Senior Producer" />
+    </div>
+    <div class="about__content">
       <p class="about__statement">
         I’m Dani, an independent senior producer brands and agencies bring in when
         an idea is <em>bigger than the team</em> in the room.

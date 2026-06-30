@@ -388,6 +388,7 @@
     gap: 1.5rem;
     margin-top: clamp(2.5rem, 6vw, 5rem);
   }
+  .contact__details { display: flex; flex-direction: column; gap: .6rem; }
   .contact__email {
     font-family: var(--serif);
     font-size: clamp(1.4rem, 3.4vw, 2.6rem);
@@ -397,6 +398,16 @@
     word-break: break-word;
   }
   .contact__email:hover { border-color: var(--cobalt); color: var(--cobalt); }
+  .contact__phone {
+    font-family: var(--sans);
+    font-size: clamp(1rem, 1.6vw, 1.3rem);
+    text-decoration: none;
+    opacity: .7;
+    letter-spacing: .04em;
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s ease, color .3s ease, opacity .3s ease;
+  }
+  .contact__phone:hover { border-color: var(--cobalt); color: var(--cobalt); opacity: 1; }
   .contact__cta {
     font-family: var(--sans);
     text-transform: uppercase;
@@ -599,7 +610,10 @@
   <section class="contact" id="contact">
     <h2 class="contact__big">Let’s<em>Talk</em></h2>
     <div class="contact__row">
-      <a class="contact__email" href="mailto:dani@daniparker.com">dani@daniparker.com</a>
+      <div class="contact__details">
+        <a class="contact__email" href="mailto:dani@daniparker.com">dani@daniparker.com</a>
+        <a class="contact__phone" href="tel:+19179602104">(917) 960-2104</a>
+      </div>
       <a class="contact__cta" href="mailto:dani@daniparker.com?subject=Let%E2%80%99s%20talk">Start a project →</a>
     </div>
     <div class="footer">

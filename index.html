@@ -168,6 +168,42 @@
   .hero__meta span { font-size: .78rem; opacity: .6; }
 
   /* =========================================================
+     CLIENTS
+  ========================================================== */
+  .clients {
+    padding: clamp(2rem, 4vw, 3.5rem) var(--pad);
+    border-bottom: 1.5px solid var(--line);
+  }
+  .clients > .eyebrow {
+    display: block;
+    margin-bottom: clamp(1.2rem, 2.5vw, 2rem);
+    opacity: .5;
+  }
+  .clients__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 0;
+  }
+  .clients__list li {
+    font-family: var(--serif);
+    font-size: clamp(1.1rem, 2.2vw, 1.75rem);
+    font-weight: 400;
+    letter-spacing: -.01em;
+    white-space: nowrap;
+  }
+  .clients__list li::after {
+    content: "/";
+    margin: 0 clamp(.5rem, 1.2vw, 1.1rem);
+    opacity: .22;
+    font-weight: 300;
+  }
+  .clients__list li:last-child::after { display: none; }
+  .clients__list li.accent { font-style: italic; color: var(--cobalt); }
+
+  /* =========================================================
      SERVICES  - two outlined columns
   ========================================================== */
   .services {
@@ -424,6 +460,30 @@
       </div>
     </div>
   </header>
+
+  <!-- CLIENTS -->
+  <section class="clients">
+    <span class="eyebrow">Selected Clients</span>
+    <ul class="clients__list">
+      <li class="accent">Tory Burch</li>
+      <li>Jean Paul Gaultier</li>
+      <li>Hanes</li>
+      <li>Revlon</li>
+      <li>Maybelline</li>
+      <li>Sally Hansen</li>
+      <li class="accent">GANT</li>
+      <li>OXO</li>
+      <li>Braun</li>
+      <li>American Standard</li>
+      <li>Bali</li>
+      <li>Newport</li>
+      <li>BIC</li>
+      <li class="accent">ClassPass</li>
+      <li>Salt and Straw</li>
+      <li>Simple Mills</li>
+      <li>Claussen</li>
+    </ul>
+  </section>
 
   <!-- SERVICES -->
   <section class="services" id="services">

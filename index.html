@@ -155,6 +155,22 @@
     line-height: 1.3;
     font-weight: 400;
   }
+  .hero__cta {
+    display: inline-block;
+    margin-top: clamp(1.8rem, 4vw, 3rem);
+    font-family: var(--sans);
+    font-size: .82rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.5px solid var(--ink);
+    border-radius: 50px;
+    padding: .9rem 1.8rem;
+    transition: background .3s ease, color .3s ease, border-color .3s ease;
+  }
+  .hero__cta:hover { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
+
   .hero__meta {
     margin-top: clamp(2rem, 5vw, 4rem);
     display: flex;
@@ -422,6 +438,8 @@
     transition: background .3s ease, color .3s ease, border-color .3s ease;
   }
   .contact__cta:hover { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
+  .contact__cta-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: .6rem; }
+  .contact__reply { margin: 0; font-size: .78rem; opacity: .5; letter-spacing: .06em; }
 
   .footer {
     display: flex;
@@ -477,10 +495,11 @@
         that want it done right.
       </p>
 
+      <a class="hero__cta" href="#contact">Get in touch →</a>
+
       <div class="hero__meta">
         <div><b>Production Consulting</b><span>Strategy, budgets, oversight</span></div>
         <div><b>Experiential + Events</b><span>Concept through on-site</span></div>
-        <div><b>Available</b><span>Select projects, 2026</span></div>
       </div>
     </div>
   </header>
@@ -618,7 +637,10 @@
         <a class="contact__email" href="mailto:dani@daniparker.com">dani@daniparker.com</a>
         <a class="contact__phone" href="tel:+19179602104">(917) 960-2104 — call or text</a>
       </div>
-      <a class="contact__cta" href="mailto:dani@daniparker.com?subject=Let%E2%80%99s%20talk">Start a project →</a>
+      <div class="contact__cta-wrap">
+        <a class="contact__cta" href="mailto:dani@daniparker.com?subject=Let%E2%80%99s%20talk">Start a project →</a>
+        <p class="contact__reply">I'll reply within 24 hours.</p>
+      </div>
     </div>
     <div class="footer">
       <span>Dani Parker, Senior Producer</span>
